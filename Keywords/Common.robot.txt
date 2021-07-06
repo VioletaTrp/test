@@ -1,0 +1,16 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Locators/Common.robot.txt
+
+*** Keywords ***
+Open Web Side
+    Open Browser    ${web}    ${browser}
+
+Auhentication Page
+    Wait Until Element Is Visible    ${singInLink}
+    Click Element    ${singInButton}
+    Wait Until Element Contains    ${authenticationTitle}    AUTHENTICATION
+
+Continue Shopping Button
+    Click Element    ${continueShopping}

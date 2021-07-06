@@ -1,0 +1,25 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Keywords/Common.robot.txt
+Resource          ../Locators/Common.robot.txt
+
+*** Variables ***
+${yourLogo}       //*[@id="header_logo"]/a
+${womenCategori}    //*[@id="block_top_menu"]/ul/li[1]/a
+${womenTitle}     //*[@id="center_column"]/h1/span[1]
+${subcategorisTops}    //*[@id="subcategories"]/ul/li[1]/div[1]/a/img
+${titleSubcategoris}    //*[@id="center_column"]/h1/span[1]
+${modelDemo1More}    //*[@id="center_column"]/ul/li[1]/div/div[2]/div[2]/a[2]/span
+${productTitle}    //*[@id="center_column"]/div/div/div[3]/h1
+${price}          //*[@id="our_price_display"]
+${quantity}       //*[@id="quantity_wanted_p"]/a[2]/span
+${color}          //*[@id="color_14"]
+${pic}            //*[@id="bigpic"]
+${addToCartButton}    //*[@id="add_to_cart"]/button/span
+${successfullAddToCart}    //*[@id="layer_cart"]/div[1]/div[1]/h2
+${modelDemo2pic}    //*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img
+${dressCategori}    //*[@id="block_top_menu"]/ul/li[2]/a
+${cassuelDressSubcategori}    //*[@id="block_top_menu"]/ul/li[2]/ul/li[1]/a
+${modelDemo3More}    //*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[2]/span
+${M}              //*[@id="group_1"]

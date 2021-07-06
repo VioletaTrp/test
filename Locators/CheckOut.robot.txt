@@ -1,0 +1,17 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${proceedToCheckout1}    //*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span
+${proceedToCheckout2}    //*[@id="center_column"]/p[2]/a[1]/span
+${address}        //*[@id="address_delivery"]/li[1]/h3
+${proceedToCheckout3}    //*[@id="center_column"]/form/p/button/span
+${shipping}       //*[@id="carrier_area"]/h1
+${termsOfService}    //*[@id="cgv"]
+${proceedToCheckout4}    //*[@id="form"]/p/button/span
+${paymentMethod}    //*[@id="center_column"]/h1
+${payByBankWire}    //*[@id="HOOK_PAYMENT"]/div[1]/div/p/a
+${bank-wire}      //*[@id="center_column"]/form/div/h3
+${confirmOrder}    //*[@id="cart_navigation"]/button/span
+${compliteOrder}    //*[@id="center_column"]/div/p/strong
+${signOut}        //*[@id="header"]/div[2]/div/div/nav/div[2]/a

@@ -1,0 +1,28 @@
+*** Settings ***
+Library           SeleniumLibrary
+Resource          ../Locators/CheckOut.robot.txt
+Resource          ../Locators/Common.robot.txt
+
+*** Keywords ***
+Signout Button
+    Click Element    ${signOut}
+
+Proceed To Checkout
+    Click Element    ${proceedToCheckout1}
+    Wait Until Element Contains    ${cartSummary}    SHOPPING-CART SUMMARY
+    Click Element    ${proceedToCheckout2}
+    Wait Until Element Is Visible    ${address}
+    Click Element    ${proceedToCheckout3}
+    Wait Until Element Is Visible    ${shipping}
+    Select Checkbox    ${termsOfService}
+    Checkbox Should Be Selected    ${termsOfService}
+    Click Element    ${proceedToCheckout4}
+
+payment Method
+    Wait Until Element Is Visible    ${paymentMethod}
+    Click Element    ${payByBankWire}
+    Wait Until Element Is Visible    ${bank-wire}
+
+Complite Order
+    Click Element    ${confirmOrder}
+    Wait Until Element Contains    ${compliteOrder}    Your order on My Store is complete.

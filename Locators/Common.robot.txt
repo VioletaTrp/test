@@ -1,0 +1,8 @@
+*** Variables ***
+${web}            http://automationpractice.com/index.php
+${browser}        Chrome
+${singInButton}    //*[@id="header"]/div[2]/div/div/nav/div[1]/a
+${singInLink}     //*[@id="header"]/div[2]/div/div/nav/div[1]/a
+${authenticationTitle}    //*[@id="center_column"]/h1
+${continueShopping}    //*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span
+${cartSummary}    //*[@id="cart_title"]

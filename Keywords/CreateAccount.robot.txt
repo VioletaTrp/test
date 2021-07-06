@@ -1,0 +1,43 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Locators/CreateAccount.robot.txt
+Resource          ../Locators/LogIn.robot.txt
+
+*** Keywords ***
+Create an Account Button
+    Click Element    ${createAnAccountButton}
+
+Email Create Acc
+    [Arguments]    ${email_argument}
+    Input Text    ${emailCreateAccaunt}    ${email_argument}
+
+Personal Information
+    Sleep    5s
+    Wait Until Element Is Visible    ${yourPersonalInformationTitle}
+
+Personal Information Filds
+    [Arguments]    ${firstName_argument}    ${lastName_argument}    ${password_argument}    ${day_argument}    ${month_argument}    ${year_argument}
+    Click Element    ${MRS}
+    Input Text    ${firstName}    ${firstName_argument}
+    Input Text    ${lastName}    ${lastName_argument}
+    Input Text    ${password}    ${password_argument}
+    Select From List By Value    ${day}    ${day_argument}
+    Select From List By Value    ${month}    ${month_argument}
+    Select From List By Value    ${year}    ${year_argument}
+    Select Checkbox    ${newsletter}
+    Checkbox Should Be Selected    ${newsletter}
+    Select Checkbox    ${option}
+    Checkbox Should Be Selected    ${option}
+    Element Should Be Visible    ${company}
+    Input Text    ${address1}    Detroid
+    Element Should Be Visible    ${address2}
+    Input Text    ${city}    Chikago
+    Select From List By Value    ${state}    13
+    Input Text    ${postcode}    61350
+    Element Should Be Visible    ${country}
+    Element Should Be Visible    ${additionalInformation}
+    Element Should Be Visible    ${homePhone}
+    Input Text    ${mobilePhone}    0123456789
+    Element Should Be Visible    ${assingn}
+    Click Element    ${registerButton}

@@ -1,0 +1,28 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Keywords/Common.robot.txt
+Resource          ../Locators/Common.robot.txt
+Resource          ../Locators/LogIn.robot.txt
+
+*** Keywords ***
+LogInEmailPass
+    [Arguments]    ${email_argument}    ${pass_argument}
+    Input Text    ${email}    ${email_argument}
+    Input Password    ${passwd}    ${pass_argument}
+
+LogIn Button
+    Click Element    ${submitLogin}
+
+My Accaunt Page
+    Wait Until Element Contains    ${myAccaunt}    MY ACCOUNT
+
+Error Message
+    Wait Until Element Is Visible    ${error}
+
+Password is Required
+    Wait Until Element Is Visible    ${passwordRequired}
+
+Forgot Your Password
+    Click Element    ${forgotPass}
+    Wait Until Element Contains    ${forgotPassMessage}    FORGOT YOUR PASSWORD?

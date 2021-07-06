@@ -1,0 +1,16 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Keywords/Common.robot.txt
+Resource          ../Locators/Common.robot.txt
+
+*** Variables ***
+${email}          //*[@id="email"]
+${passwd}         //*[@id="passwd"]
+${submitLogin}    //*[@id="SubmitLogin"]/span
+${myAccaunt}      //*[@id="center_column"]/h1
+${error}          //*[@id="center_column"]/div[1]/p
+${passwordRequired}    //*[@id="center_column"]/div[1]/ol/li
+${forgotPass}     //*[@id="login_form"]/div/p[1]/a
+${forgotPassMessage}    //*[@id="center_column"]/div/h1
+${cartSummary}    //*[@id="cart_title"]

@@ -1,0 +1,56 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+Resource          ../Keywords/Common.robot.txt
+Resource          ../Locators/Common.robot.txt
+Resource          ../Locators/ProductDetails.robot.txt
+
+*** Keywords ***
+Logo
+    Wait Until Element Is Visible    ${yourLogo}    #logo
+
+Women Categori
+    Click Element    ${womenCategori}
+    Wait Until Element Contains    ${womenTitle}    WOMEN
+
+Subcategori Tops
+    Click Element    ${subcategorisTops}
+
+Add To Cart
+    Click Element    ${addToCartButton}
+    Wait Until Element Contains    ${successfullAddToCart}    Product successfully added to your shopping cart
+
+Price visible
+    Wait Until Element Is Visible    ${price}
+
+Quantity Select
+    Click Element    ${quantity}
+
+Title Product
+    [Arguments]    ${titleProd}
+    Wait Until Element Contains    ${productTitle}    ${titleProd}
+
+Color Select
+    Click Element    ${color}
+
+More Button Model 1
+    Click Element    ${modelDemo1More}
+
+Mein Pic Model 2
+    Click Element    ${modelDemo2pic}
+
+Title Sub
+    [Arguments]    ${Titles}
+    Wait Until Element Contains    ${titleSubcategoris}    ${Titles}
+
+More Button Model 3
+    Click Element    ${modelDemo3More}
+
+Dress Categori
+    Mouse Over    ${dressCategori}
+
+Cassuel Dress
+    Click Element    ${cassuelDressSubcategori}
+
+Value
+    Select From List By Value    ${M}    2

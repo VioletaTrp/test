@@ -1,0 +1,29 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           String
+
+*** Variables ***
+${emailCreateAccaunt}    //*[@id="email_create"]
+${createAnAccountButton}    //*[@id="SubmitCreate"]/span
+${yourPersonalInformationTitle}    //*[@id="account-creation_form"]/div[1]/h3
+${MRS}            //*[@id="id_gender2"]
+${firstName}      //*[@id="customer_firstname"]
+${lastName}       //*[@id="customer_lastname"]
+${password}       //*[@id="passwd"]
+${day}            //*[@id="days"]
+${month}          //*[@id="months"]
+${year}           //*[@id="years"]
+${newsletter}     //*[@id="newsletter"]
+${option}         //*[@id="optin"]
+${company}        //*[@id="uniform-optin"]
+${address1}       //*[@id="address1"]
+${address2}       //*[@id="address2"]
+${city}           //*[@id="city"]
+${state}          //*[@id="id_state"]
+${postcode}       //*[@id="postcode"]
+${country}        //*[@id="uniform-id_country"]
+${additionalInformation}    //*[@id="other"]
+${homePhone}      //*[@id="phone"]
+${mobilePhone}    //*[@id="phone_mobile"]
+${assingn}        //*[@id="alias"]
+${registerButton}    //*[@id="submitAccount"]/span
